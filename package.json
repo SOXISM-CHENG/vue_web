@@ -1,7 +1,7 @@
 {
   "name": "vue_web",
   "description": "A Vue.js project",
-  "author": "mozhengqian",
+  "author": "MoCheng",
   "private": true,
   "scripts": {
     "dev": "webpack-dev-server -d --inline --hot --env.dev",
