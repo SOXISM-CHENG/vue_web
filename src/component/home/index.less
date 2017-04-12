@@ -1,0 +1,57 @@
+@import "../../style/common.less";
+
+.page_home{
+    background: #f3f5f7;
+    //广告分类区域样式
+    .banner-wrap{
+        position: relative;
+        padding: 10px;
+        .clearfix();
+        .banner-box{
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+        }
+        .content{
+            max-width: @max_body_width;
+            margin: auto;
+            .left-nav{
+
+            }
+            .right-box{
+                float: right;
+                .download_box{
+                    position: relative;
+                    z-index: 5;
+                    margin-bottom: 10px;
+                }
+                .notice_box{
+                    position: relative;
+                    z-index: 5;
+                }
+            }
+        }
+        .el-carousel{
+           .el-carousel__item{
+                text-align: center;
+                 h3 {
+                    color: #fff;
+                    font-size: 14px;
+                    opacity: 0.75;
+                    line-height: 150px;
+                    margin: 0;
+                }
+           }
+
+            .el-carousel__item:nth-child(2n) {
+                background-color: #99a9bf;
+            }
+            
+            .el-carousel__item:nth-child(2n+1) {
+                background-color: #d3dce6;
+            } 
+        }
+    }
+}

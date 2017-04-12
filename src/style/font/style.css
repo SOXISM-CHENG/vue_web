@@ -1,0 +1,216 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?c3lwsk');
+  src:  url('fonts/icomoon.eot?c3lwsk#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?c3lwsk') format('truetype'),
+    url('fonts/icomoon.woff?c3lwsk') format('woff'),
+    url('fonts/icomoon.svg?c3lwsk#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="qm-"], [class*=" qm-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.qm-pkg:before {
+  content: "\e93e";
+}
+.qm-edit2:before {
+  content: "\e93d";
+}
+.qm-advantage:before {
+  content: "\e900";
+}
+.qm-alert:before {
+  content: "\e901";
+}
+.qm-alert-o:before {
+  content: "\e902";
+}
+.qm-bind:before {
+  content: "\e903";
+}
+.qm-brief:before {
+  content: "\e904";
+}
+.qm-bulb:before {
+  content: "\e905";
+}
+.qm-call:before {
+  content: "\e906";
+}
+.qm-card:before {
+  content: "\e907";
+}
+.qm-cart:before {
+  content: "\e908";
+}
+.qm-catalog:before {
+  content: "\e909";
+}
+.qm-chart:before {
+  content: "\e90a";
+}
+.qm-clock:before {
+  content: "\e90b";
+}
+.qm-clock-o:before {
+  content: "\e90c";
+}
+.qm-collection:before {
+  content: "\e90d";
+}
+.qm-collection-o:before {
+  content: "\e90e";
+}
+.qm-complete:before {
+  content: "\e90f";
+}
+.qm-complete-o:before {
+  content: "\e910";
+}
+.qm-course:before {
+  content: "\e911";
+}
+.qm-data:before {
+  content: "\e912";
+}
+.qm-date:before {
+  content: "\e913";
+}
+.qm-delete:before {
+  content: "\e914";
+}
+.qm-download:before {
+  content: "\e915";
+}
+.qm-edit:before {
+  content: "\e916";
+}
+.qm-etp:before {
+  content: "\e917";
+}
+.qm-exit:before {
+  content: "\e918";
+}
+.qm-home:before {
+  content: "\e919";
+}
+.qm-home-o:before {
+  content: "\e91a";
+}
+.qm-img:before {
+  content: "\e91b";
+}
+.qm-law:before {
+  content: "\e91c";
+}
+.qm-menu:before {
+  content: "\e91d";
+}
+.qm-menu-o:before {
+  content: "\e91e";
+}
+.qm-mes:before {
+  content: "\e91f";
+}
+.qm-mes-o:before {
+  content: "\e920";
+}
+.qm-mission:before {
+  content: "\e921";
+}
+.qm-mobile:before {
+  content: "\e922";
+}
+.qm-more:before {
+  content: "\e923";
+}
+.qm-mouse:before {
+  content: "\e924";
+}
+.qm-network:before {
+  content: "\e925";
+}
+.qm-news:before {
+  content: "\e926";
+}
+.qm-news-d:before {
+  content: "\e927";
+}
+.qm-news-o:before {
+  content: "\e928";
+}
+.qm-nodata:before {
+  content: "\e929";
+}
+.qm-note:before {
+  content: "\e92a";
+}
+.qm-order:before {
+  content: "\e92b";
+}
+.qm-preview:before {
+  content: "\e92c";
+}
+.qm-pwd:before {
+  content: "\e92d";
+}
+.qm-report:before {
+  content: "\e92e";
+}
+.qm-right:before {
+  content: "\e92f";
+}
+.qm-safe:before {
+  content: "\e930";
+}
+.qm-seal:before {
+  content: "\e931";
+}
+.qm-search:before {
+  content: "\e932";
+}
+.qm-set:before {
+  content: "\e933";
+}
+.qm-skill:before {
+  content: "\e934";
+}
+.qm-student:before {
+  content: "\e935";
+}
+.qm-tag:before {
+  content: "\e936";
+}
+.qm-target:before {
+  content: "\e937";
+}
+.qm-task:before {
+  content: "\e938";
+}
+.qm-teach:before {
+  content: "\e939";
+}
+.qm-time:before {
+  content: "\e93a";
+}
+.qm-user:before {
+  content: "\e93b";
+}
+.qm-user-o:before {
+  content: "\e93c";
+}
+

@@ -1,0 +1,446 @@
+//全局样式引用
+@import "./common.less";
+@import "./bootstrap/dist/css/bootstrap.min.css";
+@import "./mixins/mixins.less";
+@import "./font/moocFont";
+
+
+/*----------全局样式-------------*/
+
+body {
+    font-family: "Microsoft Yahei", "微软雅黑",  "Adobe 黑体 Std R", "STHeiti";
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+body a {
+    color: #337ab7;
+    &:hover,
+    &:focus {
+        text-decoration: none;
+        outline: 0;
+    }
+}
+
+label {
+    font-size: inherit;
+}
+
+input,
+input:focus,
+button,
+button:focus,
+.btn:focus,
+.btn:active,
+.btn.active {
+    outline: 0 !important;
+    background-image: none;
+    box-shadow: none;
+}
+
+.max_body {
+    width: 100%;
+    max-width: @max_body_width;
+    margin: 0 auto;
+}
+
+//圆角
+.border-radius (@radius) {
+    border-radius: @radius;
+    -moz-border-radius: @radius;
+    -webkit-border-radius: @radius;
+}
+
+.f16 {
+    font-size: 16px;
+}
+
+//字体绿色，用于课程价格免费等
+.text_green {
+    color: #53b901;
+}
+
+//字体赭石色，用于课程价格不免费有数字等
+.text_orange {
+    color: #ed7218;
+}
+
+//字体灰色
+.text_gray {
+    color: #888888;
+}
+
+//字体主题色
+.text_theme {
+    color: @theme_color;
+}
+
+//字体删除线
+.text_lt {
+    text-decoration: line-through;
+}
+
+//字体红色
+.text_red {
+    color: #ff0000;
+}
+
+//字体12像素
+.f12 {
+    font-size: 12px;
+}
+
+.pt_rl {
+    position: relative;
+}
+
+.pt_as {
+    position: absolute;
+}
+
+//无外边距
+.m0 {
+    margin: 0;
+}
+
+//无内边距
+.p0 {
+    padding: 0;
+}
+
+//外边距向左
+.ml10 {
+    margin-left: 10px;
+}
+
+.ml15 {
+    margin-left: 15px;
+}
+
+.ml20 {
+    margin-left: 20px;
+}
+
+//外边距向右
+.mr5 {
+    margin-right: 5px;
+}
+.mr10 {
+    margin-right: 10px;
+}
+
+.mr15 {
+    margin-right: 15px;
+}
+
+.mr20 {
+    margin-right: 20px;
+}
+
+//外边距向上
+.mt5 {
+    margin-top: 5px;
+}
+
+.mt10 {
+    margin-top: 10px;
+}
+
+.mt15 {
+    margin-top: 15px;
+}
+
+.mt20 {
+    margin-top: 20px;
+}
+
+//外边距向下
+.mb5 {
+    margin-bottom: 5px;
+}
+
+.mb10 {
+    margin-bottom: 10px;
+}
+
+.mb15 {
+    margin-bottom: 15px;
+}
+
+.mb20 {
+    margin-bottom: 20px;
+}
+
+//内边距向左
+.pl10 {
+    padding-left: 10px;
+}
+
+.pl15 {
+    padding-left: 15px;
+}
+
+.pl20 {
+    padding-left: 20px;
+}
+
+//内边距向右
+.pr5 {
+    padding-right: 5px;
+}
+
+.pr10 {
+    padding-right: 10px;
+}
+
+.pr15 {
+    padding-right: 15px;
+}
+
+.pr20 {
+    padding-right: 20px;
+}
+
+//内边距向上
+.pt10 {
+    padding-top: 10px;
+}
+
+.pt15 {
+    padding-top: 15px;
+}
+
+.pt20 {
+    padding-top: 20px;
+}
+
+//内边距向下
+.pb10 {
+    padding-bottom: 10px;
+}
+
+.pb15 {
+    padding-bottom: 15px;
+}
+
+.pb20 {
+    padding-bottom: 20px;
+}
+
+//内边距 左右
+.plr10 {
+    padding: 0 10px;
+}
+
+.plr15 {
+    padding: 0 15px;
+}
+
+
+/*.ant-modal-container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    .ant-modal-wrap{
+        height: 100%;
+        overflow: auto;
+        .ant-modal{
+            margin-bottom: 100px;
+        }
+    }
+}*/
+
+//错误提示
+.error_tip {
+    position: absolute;
+    left: 0;
+    top: -10px;
+    width: 100%;
+    z-index: 999;
+    .message {
+        background: #ffffff;
+        color: #ff0000;
+        padding: 0 5px;
+        top: 0;
+        display: table;
+        margin: 0 auto;
+    }
+}
+
+
+/* slide_page  start */
+
+.slider_page {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 1001;
+    opacity: 0;
+    overflow: auto;
+    .transition(all .2s ease-in-out);
+    transform: translateX(100%);
+    background: #fff;
+    &.open {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.full_page {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: auto;
+    z-index: 1050;
+}
+
+
+/* full_page end */
+
+
+/* star_selector start */
+
+.star_selector {
+    @color_t: #ffb200;
+    @color_b: #ffb200;
+    .fa:before {
+        // background-image: -webkit-gradient(linear, 5 8, 11 bottom, from(@color_t), to(@color_b));
+        // -webkit-background-clip: text;
+        // -webkit-text-fill-color: transparent;
+        color: #ffb200;
+    }
+    .fa.empty:before {
+        color: #c3c3c3;
+    }
+}
+
+
+/* star_selector end */
+
+
+/* breadcrumb start */
+
+.ant-breadcrumb {
+    @active_color: #378fca;
+    font-size: inherit;
+    a {
+        color: inherit;
+    }
+    &> *:hover,
+    &> span:last-child {
+        color: @active_color;
+    }
+}
+
+.ant-calendar-picker-clear{
+    pointer-events: none;
+    display: none;
+}
+
+
+/* breadcrumb end */
+
+.ant-breadcrumb .ant-breadcrumb-link {
+    cursor: pointer;
+}
+
+.ant-tooltip .ant-tooltip-content {
+    .ant-tooltip-arrow {
+        border-top-color: #888;
+    }
+    .ant-tooltip-inner {
+        background-color: #888;
+    }
+}
+
+.bdshare-slide-button-box{
+    display: none;
+}
+
+.ant-modal {
+    @antmodal_title_bgcolor: #f8f8f8;
+    @antmodal_btn_color: #388ecb;
+    @antmodal_btn_bgcolor: #fff;
+    .ant-modal-content{
+        border-radius: 3px;
+    }
+    .ant-modal-header {
+        background: @antmodal_title_bgcolor;
+    }
+    .ant-modal-body {
+        .tip_mes {
+            .tip_icon {
+                float: left;
+
+                width: 80px;
+
+                text-align: center;
+                .tip_success {
+                    font-size: 32px;
+
+                    display: inline-block;
+
+                    width: 46px;
+                    height: 46px;
+
+                    text-align: center;
+
+                    color: #fff;
+                    background: #00cd34;
+
+                    .border-radius(50%);
+                }
+            }
+            .tip_content {
+                margin-left: 80px;
+                .name {
+                    font-size: 15px;
+
+                    overflow: hidden;
+
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                }
+                .text {
+                    font-size: 18px;
+
+                    margin-top: 5px;
+                }
+            }
+        }
+        p {
+            word-break: break-all;
+        }
+    }
+    .ant-modal-footer {
+        padding: 15px 10px;
+
+        text-align: center;
+
+        border-top: none;
+    }
+    .ant-btn-primary {
+        color: @antmodal_btn_color;
+        border: 1px solid @antmodal_btn_color;
+        background: @antmodal_btn_bgcolor;
+    }
+}
+@media (max-width: 767px) {
+    .ant-modal{
+      width: 80% !important;
+      min-width: 300px !important;
+      max-width: 520px !important;
+    }
+}

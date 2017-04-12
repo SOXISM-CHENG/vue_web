@@ -1,0 +1,64 @@
+
+/*----------全局变量-------------*/
+
+@import './bootstrap/less/variables.less';
+@max_body_width: 1180px; //页面内容部分最大宽度
+@theme_color: #388ecb; //系列课主题色
+@background_color: #f3f5f7; // 背景颜色
+@body_bg_color: #eeeeee; //页面背景色
+@theme_color: #388ecb; //系列课主题色
+@headTop_fontcolor: #888888; //一般字体颜色
+@headTop_back: #f2f2f2; //背景色
+@border_color: #eeeeee; //边框色
+@font_color: #333333; // 字体色
+
+/*----------全局mixmin-------------*/
+
+@import './bootstrap/less/mixins.less';
+.border-radius(@x) {
+    border-radius: @x;
+}
+
+.transition(@x) {
+    transition: @x;
+}
+.display-flex() {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+
+
+/*----------全局动画-------------*/
+
+.lightAnim() {
+    &:before {
+        width: 80px;
+        height: 550px;
+        top: -40px;
+        left: -180px;
+        content: "";
+        position: absolute;
+        overflow: hidden;
+        background: -moz-linear-gradient(left, rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0) 100%);
+        background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(50%, rgba(255, 255, 255, 0.2)), color-stop(100%, rgba(255, 255, 255, 0)));
+        background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0) 100%);
+        background: -o-linear-gradient(left, rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0) 100%);
+        -webkit-transform: skewX(-25deg);
+        -moz-transform: skewX(-25deg);
+    }
+    &:hover {
+        &:before {
+            .transition(left .8s);
+            left: 140%;
+        }
+    }
+}
+
+.form-control-input{
+    position:relative;
+    z-index: 1;
+}
+
