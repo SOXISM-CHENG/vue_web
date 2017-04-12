@@ -42,6 +42,10 @@ module.exports = (options = {}) => ({
         use: ['style-loader', 'css-loader', 'postcss-loader']
       },
       {
+        test: /\.less$/,
+        use: ['less-loader', 'css-loader', 'postcss-loader']
+      },
+      {
         test: /favicon\.png$/,
         use: [{
           loader: 'file-loader',

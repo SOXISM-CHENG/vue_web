@@ -1,7 +1,7 @@
 {
-  "name": "element-starter",
+  "name": "vue_web",
   "description": "A Vue.js project",
-  "author": "yi.shyang@ele.me",
+  "author": "mozhengqian",
   "private": true,
   "scripts": {
     "dev": "webpack-dev-server -d --inline --hot --env.dev",
@@ -9,7 +9,11 @@
   },
   "dependencies": {
     "element-ui": "^1.1.2",
-    "vue": "^2.1.8"
+    "vue": "^2.1.10",
+    "vue-loader": "^10.0.2",
+    "vue-router": "^2.1.3",
+    "webpack": "^2.2.0-rc.4",
+    "webpack-dev-server": "beta"
   },
   "engines": {
     "node": ">=6"
@@ -30,10 +34,10 @@
     "postcss-loader": "^1.3.3",
     "rimraf": "^2.5.4",
     "style-loader": "^0.13.2",
+    "less": "^2.5.3",
+    "less-loader": "^2.2.2",
     "url-loader": "^0.5.8",
     "vue-loader": "^11.1.4",
-    "vue-template-compiler": "^2.1.8",
-    "webpack": "^2.2.0-rc.4",
-    "webpack-dev-server": "beta"
+    "vue-template-compiler": "^2.1.8"
   }
 }

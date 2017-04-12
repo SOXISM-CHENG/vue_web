@@ -1,13 +1,143 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-  <meta charset="utf-8">
-  <title>element-starter</title>
+    <title>vue_web</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+    <!-- 当网站添加到主屏快速启动方式，可隐藏地址栏，仅针对safari -->
+    <meta content="yes" name="apple-mobile-web-app-capable" >
+    <!-- 将网站添加到主屏快速启动方式，仅针对safari顶端状态条的样式 -->
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" >
+    <!-- 禁止将页面中的数字识别为电话号码 -->
+    <meta content="telephone=no" name="format-detection" >
+    <!-- 忽略android平台对邮箱地址的识别 -->
+    <meta content="email=no" name="format-detection" >
+    <style>
+        .compatible-tips{
+            display: none;
+            width: 100%;
+            height: 100%;
+            background: #f3f3f3;
+            color:#989898;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+        }
+        .compatible-tips .compatible-tipsdiv{
+            width: 800px;
+            height: 300px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            margin:auto;
+        }
+        .compatible-show{
+            display: block;
+        }
+        .compatible-tips .tips-div{
+            margin-top:70px;
+        }
+        .compatible-tips .tips-imgslink{
+            height: 100px;
+            text-align: center;
+        }
+        .compatible-tips .imgslink-img{
+            display: inline-block;
+            width: 80px;
+            height: 100px;
+            padding-bottom: 20px;
+            position: relative;
+            cursor: pointer;
+            margin:0 20px;
+        }
+        .compatible-tips .imgslink-img img{
+            position: absolute;
+            width: 100%;
+            left:0;
+            top:0;
+            border: none;
+        }
+        .compatible-tips .imgslink-img:hover{
+            opacity: .7;
+        }
+        .compatible-tips .imgslink-img  .webname{
+            display: inline-block;
+            position: absolute;
+            bottom: 0;
+            left:0;
+            width: 100%;
+            height: 20px;
+            color:#989898;
+        }
+
+    </style>
+    <!--[if IE]>
+        <script src="./learner/js/common/checkActiveX/checkActiveX.js" type="text/javascript"></script>
+        <div id="videoArea" style="width: 0;height: 0;overflow: hidden;">
+            <script type="text/javascript">
+            AC_AX_RunContent('id', 'NSPlay', 'width', '268', 'height', '201', 'classid', 'CLSID:6BF52A52-394A-11d3-B153-00C04F79FAA6', 'url', '', 'uiMode', 'none', 'enablecontextmenu', 'false');
+
+            window.onload = function() {
+                try {
+                    initMedia();
+                    //alert('已开启');
+                } catch (err) {
+                    alert('需要到Internet选项中开启"对标记为可安全执行脚本的ActiveX控件执行脚本"');
+                }
+            };
+            </script>
+            <noscript>
+                <OBJECT ID="NSPlay" width="268" height="201" CLASSID="CLSID:6BF52A52-394A-11d3-B153-00C04F79FAA6">
+                    <PARAM name="URL" value="">
+                    <PARAM name="uiMode" value="none">
+                    <PARAM name="ShowAudioControls" value="false">
+                    <param name="EnableContextMenu" value="false">
+                </OBJECT>
+            </noscript>
+        </div>
+    <![endif]-->
+    <!--[if lt IE 9]>
+        <script>
+            window.onload = function(){
+                document.getElementById("compatible").className = "compatible-tips compatible-show";
+            };
+        </script>
+    <![endif]-->
+    <!--[if lt IE 10]>
+    <script src="https://as.alipayobjects.com/g/component/??console-polyfill/0.2.2/index.js,es5-shim/4.1.14/es5-shim.min.js,es5-shim/4.1.14/es5-sham.min.js,html5shiv/3.7.2/html5shiv.min.js,media-match/2.0.2/media.match.min.js"></script>
+    <![endif]-->
 </head>
 
 <body>
-  <div id="app"></div>
+    <div id="app">
+        <div id="compatible" class="compatible-tips">
+            <div class="compatible-tipsdiv">
+                <!--<img src="/learner/images/weil.jpg" alt="warning" style="width: 150px;float: left;">-->
+                <div class="tips-div">得到我们平台最好的体验效果，我们建议您升级到最新版本的Internet Explorer 10及以上版本；若您使用的是Windows XP系统，请下载360浏览器进行访问；若您使用的是苹果电脑，建议使用Safari浏览器：</div>
+                <div class="tips-imgslink">
+                    <a class="imgslink-img" target="_blank" href="http://c.mooc.baosteel.com/downloads/browser/360se8_8.1.1.242.exe">
+                        <!--<img src="/learner/images/360.png" alt="360浏览器" style="width: 85px;height: 85px;">-->
+                        <span class="webname">360浏览器极速模式</span>
+                    </a>
+                    <a class="imgslink-img" target="_blank" href="https://www.microsoft.com/zh-cn/download/internet-explorer.aspx">
+                        <!--<img src="/learner/images/ie11.png" alt="IE11浏览器" style="width: 85px;height: 85px;">-->
+                        <span class="webname">Internet Explorer10及以上</span>
+                    </a>
+                    <a class="imgslink-img" target="_blank" href="https://www.baidu.com/link?url=HvUJdAt7nclh4XJnTrFM6AFL2TqIqzyr48StQ8endTLkplVrSSxMyX7veEKm_UhAbQPs4vQkfrZ5H7PE8aJ14qHclFt-ldZtzjZJY_9N9S3&wd=&eqid=82e79dcb000279d90000000358a16086">
+                        <!--<img src="/learner/images/safari.png" alt="Safari浏览器" style="width: 85px;height: 85px;">-->
+                        <span class="webname">Safari IOS</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
